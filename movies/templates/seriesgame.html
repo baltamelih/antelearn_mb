@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+  <link href="{%static 'css/seriesgame.css' %}" rel="stylesheet">
+    <title>ANTELEARN</title>
+</head>
+
+<body>
+
+
+
+<div id='container'>
+    <ul>
+      <div class="row row-cols-1 row-cols-md-6 g-4" style="--bs-gutter-x:0; transform: translateX(70px)">
+    {%for word in games%}
+  <div class='card'>
+    <div class='front'>
+      <span class='name'>{{word.word|lower|capfirst}}</span>
+      <hr>
+    </div>
+    <div class='back'>
+        <button role="{{word.word}}" class="button" type="button" id="submit-button" style="background-color:#2e424d;width:45px;height:45px;margin:0 0 0 0">
+       <svg class="icon icon-music-on" viewBox="0 0 24 24">
+         <path class="path1" d="M14.016 3.234c4.031 0.891 6.984 4.5 6.984 8.766s-2.953 7.875-6.984 8.766v-2.063c2.906-0.844 4.969-3.516 4.969-6.703s-2.063-5.859-4.969-6.703v-2.063zM16.5 12c0 1.781-0.984 3.281-2.484 4.031v-8.063c1.5 0.75 2.484 2.25 2.484 4.031zM3 9h3.984l5.016-5.016v16.031l-5.016-5.016h-3.984v-6z"></path>
+       </svg>
+        </button>
+
+      <span>{{word.count}}</span>
+      <p>{{word.translation|lower|capfirst}}</p>
+      <span> </span>
+    </div>
+  </div>
+
+    {%endfor%}
+          </div>
+   </ul>
+     <a  href="{%url 'jumbbledgame' %}">
+    <button style="background-color: rgba(94,171,150,0.29);color: #0c0c0c;border-color: #0c0c0c" type="button" class="button btn-primary btn-lg">Game</button>
+</a>
+</div>
+
+
+
+
+
+
+<!-- -->
+
+
+
+
+
+<script src="{%static 'js/speak.js' %}"></script>
+</body>{% include 'navbar.html' %}
+</html>

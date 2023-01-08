@@ -1,0 +1,49 @@
+.tg {
+  border-collapse: collapse;
+  border-spacing: 0px;
+  border: none;
+  text-align: center;
+}
+
+.tg td {
+  font-family: 'Nanum Gothic';
+  text-transform: uppercase;
+  font-size: 11px;
+  padding: 10px 5px;
+  color: #000;
+}
+
+.tg th {
+  font-family: 'Nunito Sans';
+  font-weight: normal;
+  font-size: 14px;
+  padding: 10px 5px;
+  color: #cd9934;
+  background-color: #f0f0f0;
+  text-align: center;
+}
+
+.tg .tg-liondor {
+  background-color: #e0c3c3;
+  color: #6d4242;
+  text-align: center;
+}
+
+.tg .tg-badgerpuff {
+  background-color: #e0dac3;
+  color: #6d6141;
+}
+
+.tg .tg-snakerin {
+  background-color: #c5e0c3;
+  color: #446d41;
+}
+
+.tg .tg-eagleclaw {
+  background-color: #c3cfe0;
+  color: #414e6d;
+}
+
+.dadadesc {
+  font-family: 'Oswald';
+  font-size: 16px;}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Antelearn</title>
+    <link href="{%static 'css/admin.css' %}" rel="stylesheet">
+</head>
+<body>
+<form style=""action method="post">
+
+  <h1><strong>File upload</strong> Series </h1>
+
+  <div class="form-group">
+    <label for="title"><b>Series Name</b></label>
+    <input type="text" name="title" id="title" class="form-controll"/>
+  </div>
+  <div class="form-group">
+    <label for="caption"><b>Season number</b></label>
+    <input type="text" name="caption" id="caption" class="form-controll"/>
+  </div>
+  <div class="form-group">
+    <label for="caption"><b>Episode number</b></label>
+    <input type="text" name="caption" id="episodeno" class="form-controll"/>
+  </div>
+
+  <div class="form-group file-area">
+        <span>MP3 FILE</span><br>
+    <input type="file" name="images" id="images" required="required" multiple="multiple"/>
+    <div class="file-dummy">
+
+    </div>
+  </div>
+
+  <div class="form-group">
+    <button type="submit">Upload Series</button>
+  </div>
+
+</form>
+  <div class="form-group">
+    <button type="submit">Database Update</button>
+  </div>
+
+
+
+
+</body>
+{% include 'navbar.html' %}
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://kit.fontawesome.com/bdd89edb33.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" />
+       <link href="{%static 'css/price.css' %}" rel="stylesheet">
+    <title>ANTELEARN</title>
+  </head>
+  <body style="background-color:#4d4d50;min-height: auto">
+
+  <div class="pricing-table">
+  <h2>Shared Hosting Plans</h2>
+  <div class="price-item">
+    <ul style="padding-left:0">
+      <li class="plan">Personal</li>
+      <li class="price">
+        <p>Free<small>/mo</small></p>
+        <span class="price-doller">$5.99</span>
+        <span class="discount">Save 100%</span>
+      </li>
+      <li class="btn"><button>Get Started</button></li>
+      <li>Five Episodes</li>
+                  <li>Five Series</li>
+                  <li>One Exercise</li>
+                  <li>Five Healths</li>
+    </ul>
+  </div>
+  <div class="price-item">
+    <ul style="padding-left:0">
+      <li class="plan plus">Business+</li>
+      <li class="price">
+        <p>$19.95<small>/mo</small></p>
+        <span class="price-doller">$39.90</span>
+        <span class="discount plus">Save 50%</span>
+      </li>
+      <li class="btn"><button class="plus">Get Started</button></li>
+      <li>All Episodes</li>
+                  <li>All Series</li>
+                  <li>All Exercises</li>
+                  <li>Limitless Health</li>
+                  <li>Games</li>
+                  <li>Weekly Prizes</li>
+
+    </ul>
+  </div>
+  <div class="price-item">
+    <ul style="padding-left:0">
+      <li class="plan">Business</li>
+      <li class="price">
+        <p>$9.95<small>/mo</small></p>
+        <span class="price-doller">$19.90</span>
+        <span class="discount">Save 50%</span>
+      </li>
+      <li class="btn"><button>Get Started</button></li>
+      <li>Twenty-Five Episodes</li>
+                  <li>Twenty-Five Series</li>
+                  <li>Two Exercises</li>
+                  <li>Twenty-Five Healths</li>
+    </ul>
+  </div>
+</div>
+
+
+
+
+
+  </body>
+{% include 'navbar.html' %}
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+</html>

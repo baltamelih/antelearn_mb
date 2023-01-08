@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.104.2">
+    <title>ANTELEARN</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/carousel/">
+
+<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <!-- Favicons -->
+<link rel="apple-touch-icon" href="/docs/5.2/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="/docs/5.2/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/docs/5.2/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="mask-icon" href="/docs/5.2/assets/img/favicons/safari-pinned-tab.svg" color="#712cf9">
+<link rel="icon" href="/docs/5.2/assets/img/favicons/favicon.ico">
+<meta name="theme-color" content="#712cf9">
+    <style>
+        #animated-cards .card-header {
+  height: 200px;
+  background-color: darkslategray;
+}
+
+#animated-cards .service-icon {
+  font-size: 30px;
+  color: black;
+  opacity: 0.4;
+  font-size: 60px;
+}
+
+#animated-cards .heading-card {
+  margin-top: 20px;
+  font-size: 45px;
+}
+
+#animated-cards .cardheader-text {
+  color: #fff;
+}
+
+#animated-cards .card-text.sub-text-color {
+  color: #8c8c8c;
+}
+
+#animated-cards .card-text:last-child {
+  font-size: 30px;
+  color: #595959;
+}
+
+#animated-cards .cardheader-subtext {
+  font-size: 20px;
+}
+
+#animated-cards .card.cards-shadown {
+  box-shadow: 2px 2px 30px #aaaaaa;
+}
+
+#animated-cards {
+  margin: 40px;
+}
+
+#animated-cards .col {
+  padding: 20px 7px 0px 7px;
+}
+
+/* Card Hover Scale & Effect */
+
+#animated-cards .card:hover {
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+  transition: all 1200ms;
+  z-index: 99;
+}
+
+#animated-cards .card {
+  transition: all 1200ms;
+  height: 100%;
+}
+
+/* Color on hover */
+
+#animated-cards .card-header:first-child:hover {
+  background-color: #fed136;
+}
+
+#animated-cards .card:hover .card-header:first-child {
+  background-color: #fed136;
+}
+
+/* Icons */
+
+#animated-cards .card:hover .service-icon {
+  -webkit-transform: translateX(10px) translateY(10px) scale(1.3);
+  -moz-transform: translateX(10px) translateY(10px) scale(1.3);
+  -o-transform: translateX(10px) translateY(10px) scale(1.3);
+  -ms-transform: translateX(10px) translateY(10px) scale(1.3);
+  transform: translateX(10px) translateY(10px) scale(1.3);
+  transition: all 1200ms;
+}
+
+#animated-cards .card .service-icon {
+  transition: all 1200ms;
+}
+
+
+
+
+
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+      body {
+      background-image:url("{%static 'img/bg2.png'%}");
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: 100% 100%;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .b-example-divider {
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+      .slider{
+
+          width: 70%;
+        margin: 0 auto 20px;
+        text-align: center;
+      }
+      </style>
+    <!-- Custom styles for this template -->
+    <link href="carousel.css" rel="stylesheet">
+</head>
+<body>
+<main>
+<div id="myCarousel" class="carousel slide slider" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div  class="carousel-inner">
+      <div class="carousel-item active">
+        <img style="width: 100%;height: auto;" src= "{%static 'img/slide-1.jpg'%}" >
+        <div class="container">
+          <div class="carousel-caption text-start">
+            <p><a class="btn btn-lg btn-primary" href="{%url 'register'%}">Sign up today</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+       <img style="width: 100%;height: auto;" style="object-fit: cover" src= "{%static 'img/learn.jpeg'%}" >
+
+        <div class="container">
+          <div style="background-color:rgba(0,0,0,0.7) " class="carousel-caption">
+            <h1>Hosting Plans</h1>
+            <p>Click to see our hosting plans</p>
+            <p><a class="btn btn-lg btn-primary" href="{%url 'price'%}">Learn more</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img style="width: 100%;height: auto;" src= "{%static 'img/slide-3.jpg'%}" >
+
+        <div class="container">
+          <div style="background-color:rgba(0,0,0,0.7); " class="carousel-caption">
+            <h1>Do you want to watch one more episode?</h1>
+            <p> Login and exercise in our website before watching the episode.</p>
+            <p><a class="btn btn-lg btn-primary" href="{%url 'login'%}">Login Here</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  <br>
+  <!-- Marketing messaging and featurettes
+  ================================================== -->
+  <!-- Wrap the rest of the page in another container to center all the content. -->
+
+  <div class="container marketing">
+
+    <!-- Three columns of text below the carousel -->
+
+    <div class="row">
+<section id="services">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 style="color: whitesmoke"class="text-uppercase section-heading">Services</h2>
+                <h3  class="text-muted section-subheading">Programming languages that we used to build our website</h3>
+            </div>
+        </div>
+        <div class="row space-rows" id="animated-cards">
+            <div class="col">
+                <div class="card cards-shadown cards-hover">
+                    <div class="card-header"><span class="space"><i class="fab fa-angular service-icon" id="service-icon-1"></i></span>
+                        <div class="cardheader-text">
+                            <h4 id="heading-card-1" class="heading-card">Web App</h4>
+                            <p id="cardheader-subtext-1" class="cardheader-subtext">HTML, CSS, DJANGO</p>
+                        </div>
+                    </div>
+                    <div class="card-body">
+
+                        <p class="card-text cardbody-sub-text">We provide all you need for you to watch comfortably.<br /><br /><br /></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card cards-shadown cards-hover">
+                    <div class="card-header"><span class="space"><i class="fab fa-windows service-icon" id="service-icon-2"></i></span>
+                        <div class="cardheader-text">
+                            <h4 id="heading-card-2" class="heading-card">Back-end</h4>
+                            <p id="cardheader-subtext-2" class="cardheader-subtext">Python</p>
+                        </div>
+                    </div>
+                    <div class="card-body">
+
+                        <p class="card-text cardbody-sub-text">We used Python in back-end.<br /><br /><br /></p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+
+    </div><!-- /.row -->
+
+    <!-- START THE FEATURETTES -->
+
+    <hr class="featurette-divider">
+  <div class="card bg-white mt-5">
+    <div class="row featurette">
+
+    </div>
+  </div>
+    <hr class="featurette-divider">
+  <div class="card bg-white mt-5">
+    <div class="row featurette">
+      <div class="col-md-7 order-md-2">
+        <h2 style="text-align: center"class="featurette-heading fw-normal lh-1">Our Motivation <span class="text-muted"></span></h2><br><br>
+        <p class="lead">To make studies to make TV series and movies more meaningful and to
+            make foreign language learning fun.We planned to develop the project called 'Antelearn' because we aimed
+            to watch TV series and movies that we had watched before, while eliminating the disadvantages of watching
+            them with subtitles and watching them more comfortably. We aim to make it easier to learn English,
+            which is accepted as a universal language, and then to learn other languages..</p>
+      </div>
+      <div class="col-md-5 order-md-1">
+        <img src = "{%static 'img/learn.jpg'%}" width="500px">
+      </div>
+    </div>
+  </div>
+    <hr class="featurette-divider">
+
+    <!-- /END THE FEATURETTES -->
+
+  </div><!-- /.container -->
+
+  <!-- FOOTER -->
+    </main>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+{%include 'navbar.html'%}
+</body>
+</html>

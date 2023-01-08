@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Antelearn</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+</head>
+
+<style>
+body {
+    margin: 0 auto;
+    background:pink;
+}
+.container
+{
+      width: 500px; /*ortalanacak div genişliği*/
+        margin:0 auto; /*alt-üst(0) sağ-sol(auto) boşluk olacak*/
+        border:1px solid #3f3b3b;
+        height: 650px;
+}
+.align-items-center{
+    text-align: center;
+    align-items: center;
+    margin: 0 auto;
+    justify-content: center;
+}
+.btn-group{
+    height: 70px;
+    width: 70px;
+    font-size: 150px;
+}
+.btn-outline-danger{
+    height: auto;
+    width: 80px;
+}
+
+
+
+
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:900i');
+
+* {
+  box-sizing: border-box;
+}
+
+
+
+
+
+.counter {
+  width: 120px;
+  font: 800 40px system-ui;
+  overflow: hidden;
+}
+
+.numbers div {
+  text-align: center;
+  flex: 0 0 100px;
+}
+
+.bn62 {
+  color: #1cc49d;
+  background-color: #1b2f31;
+  border-radius: 50px;
+  justify-content: center;
+  align-items: center;
+  height: 45px;
+  width: 80px;
+  font-size: large;
+  font-weight: 600;
+}
+
+
+.bn59 {
+  background-color: #1b2f31;
+  font-weight: 600;
+  outline: none;
+  border-radius: 50px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  height: 45px;
+  width: 80px;
+  opacity: 1;
+}
+
+.bn632-hover {
+  width: 160px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  margin: 20px;
+  height: 55px;
+  text-align:center;
+  border: none;
+  background-size: 300% 100%;
+  border-radius: 50px;
+  moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+.bn632-hover:hover {
+  background-position: 100% 0;
+  moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+.bn632-hover:focus {
+  outline: none;
+}
+
+.bn632-hover.bn28 {
+  background-image: linear-gradient(
+    to right,
+    #eb3941,
+    #f15e64,
+    #e14e53,
+    #e2373f
+  );
+  box-shadow: 0 5px 15px rgba(242, 97, 103, 0.4);
+}
+</style>
+
+<body>
+<div class="container">
+
+    <div class="align-items-center">
+    <div class="counter">
+  <div class="numbers">
+      <h1> SCORE </h1>
+      <div>{{point}}</div>
+      <div style="font-size: 15px">
+          Correct : {{true}} Wrong : {{wrong}}
+      </div>
+
+  </div>
+</div>
+
+        <br>
+        {%for letter in jword%}
+        <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+           <button type="button" class="btn btn-secondary">{{letter|upper}}</button>
+
+    </div>
+        {%endfor%}
+    {% if message %}
+        {{message}}
+
+{% endif %}
+
+<br><br>
+
+        <form action="{%url 'controljumbbled'%}" method="get">
+        <input style="width: 300px; height: 50px;font-size: 25px;text-align: center"type="text" name="answer" placeholder="Answer" id="answer" autofocus>
+            <br>
+            <br>
+        <button class="bn62">Control</button>
+        </form>
+    <br>
+            <form action="{%url 'jumbbledgame'%}">
+            <button style="color: yellow" class="bn59">Pass</button>
+            </form>
+
+                    <form action="{%url 'pointtable'%}"method ="get">
+                         <button class="bn632-hover bn28">Finish</button>
+                    </form>
+
+
+
+</div>
+
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+
+    </div>
+
+</body>{% include 'navbar.html' %}
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+</html>
